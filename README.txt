@@ -16,7 +16,13 @@ techstore-u4/
   probar_pt8.py Verificaba que el punto estaba bien hecho mediante pruebas
   probar_pt9.py Verificaba que el punto estaba bien hecho mediante pruebas
   probar_pt10.py Verificaba que el punto estaba bien hecho mediante pruebas
-  resultados_pt10.csv Bitacora creada desde probar_pt10.py para completar el punto 10
+  Bitacora_15escenarios.csv Bitacora creada desde probar_pt10.py para completar el punto 10
+  evidencias/  Contiene imagenes de evidencias
+    Carga_16pedidos.png
+    Swagger_404.png
+    Swagger_exito.png
+    Swagger_422.png
+    Swagger_409.png
 ```
 
 ## Instalación

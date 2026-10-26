@@ -262,7 +262,7 @@ for resultado in resultados:
 
 # Guardar el registro en CSV
 with open(
-    "resultados_pt10.csv",
+    "Bitacora_15escenarios.csv",
     "w",
     newline="",
     encoding="utf-8-sig",
@@ -278,4 +278,4 @@ with open(
     escritor.writeheader()
     escritor.writerows(resultados)
 
-print("\nSe guardo todo en resultados_pt10.csv")
+print("\nSe guardo todo en Bitacora_15escenarios.csv")
