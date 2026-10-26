@@ -1,0 +1,17 @@
+﻿pedido_id,cliente_id,tiene_promocion,estado_inicial,descripcion
+O001,C001,0,DRAFT,VIP con 4 unidades: descuento 10%
+O002,C002,0,DRAFT,No VIP: descuento 0%
+O003,C003,0,DRAFT,VIP inactivo: no confirmar
+O004,C004,0,DRAFT,Cliente normal inactivo
+O005,C005,1,DRAFT,Promocion activa excluye descuentos
+O006,C006,0,DRAFT,Total superior a 5000: descuento 5%
+O007,C007,0,DRAFT,Pedido vacio: no confirmar
+O008,C008,0,DRAFT,20 unidades exactas permitidas
+O009,C009,0,DRAFT,Al agregar se superan 20 unidades
+O010,C010,0,DRAFT,Total exactamente 500
+O011,C011,0,DRAFT,VIP con solo 3 unidades
+O012,C012,0,DRAFT,Enviar sin guia despues de confirmar
+O013,C001,0,DRAFT,Confirmar dos veces
+O014,C002,0,DRAFT,Cancelar despues de enviar
+O015,C005,0,DRAFT,Devolucion desde SHIPPED
+O016,C007,0,DRAFT,Entrega desde SHIPPED

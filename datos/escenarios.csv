@@ -1,0 +1,16 @@
+﻿caso_id,pedido_id,accion,objetivo,pista
+E01,O001,evaluar_descuento,10%,AND VIP + monto >500 + unidades >=4 + NOT promo
+E02,O002,evaluar_descuento,0%,"No VIP, total menor a 5000"
+E03,O003,confirmar,rechazo,Cliente inactivo
+E04,O005,evaluar_descuento,0%,Promocion activa bloquea descuento
+E05,O006,evaluar_descuento,5%,OR total >5000 y sin promocion
+E06,O007,confirmar,rechazo,Pedido sin articulos
+E07,O008,confirmar,exito,20 unidades permitidas
+E08,O009,agregar SKU003 x2,rechazo,21 unidades excede limite
+E09,O010,evaluar_descuento,0%,Umbral estricto >500
+E10,O011,evaluar_descuento,0%,"Solo 3 unidades, requiere 4"
+E11,O012,confirmar y enviar sin guia,rechazo envio,La confirmacion es valida pero falta guia
+E12,O013,confirmar dos veces,rechazo segunda,No permite confirmar desde CONFIRMED
+E13,O014,"confirmar, enviar y cancelar",rechazo cancelacion,No permite cancelar desde SHIPPED
+E14,O015,"confirmar, enviar y devolver",exito,Termina en RETURNED
+E15,O016,"confirmar, enviar y entregar",exito,Termina en DELIVERED

@@ -1,0 +1,16 @@
+﻿caso_id,estado_inicial,operacion,resultado_real,explicacion
+E01,DRAFT,Evaluar descuento,10.00%,"Regla VIP, monto mayor a 500, al menos 4 unidades y sin promoción. Esperado: 10%. La evaluación no cambia el pedido ni genera eventos."
+E02,DRAFT,Evaluar descuento,0.00%,"Cliente no VIP y total menor a 5000, según el escenario. Esperado: 0%. La evaluación no cambia el pedido ni genera eventos."
+E03,DRAFT,Confirmar,Confirmar: Rechazo: El cliente esta inactivo. Eventos nuevos: ninguno.,Se espera rechazo por cliente inactivo. Estado final: DRAFT.
+E04,DRAFT,Evaluar descuento,0.00%,La promocion activa impide aplicar ambos descuentos. Esperado: 0%. La evaluación no cambia el pedido ni genera eventos.
+E05,DRAFT,Evaluar descuento,5.00%,Total mayor a 5000 y sin promocion. Esperado: 5%. La evaluación no cambia el pedido ni genera eventos.
+E06,DRAFT,Confirmar,Confirmar: Rechazo: El pedido requiere articulos. Eventos nuevos: ninguno.,Se espera rechazo porque el pedido no tiene articulos. Estado final: DRAFT.
+E07,DRAFT,Confirmar,Confirmar: Éxito; estado actual: CONFIRMED. Eventos nuevos: OrderConfirmed.,Unidades iniciales: 20. El limite permitido es 20. Estado final: CONFIRMED.
+E08,DRAFT,Agregar SKU003 x2,Agregar SKU003 x2: Rechazo: Máximo 20 unidades. Eventos nuevos: ninguno.,Unidades antes: 19. Se intenta agregar 2 unidades. Unidades despues: 19. Se espera rechazo si se exceden 20.
+E09,DRAFT,Evaluar descuento,0.00%,Un total exactamente igual a 500 no supera el umbral. Esperado: 0%. La evaluación no cambia el pedido ni genera eventos.
+E10,DRAFT,Evaluar descuento,0.00%,La regla del 10% exige al menos 4 unidades. Esperado: 0%. La evaluación no cambia el pedido ni genera eventos.
+E11,DRAFT,Confirmar y enviar sin guia,Confirmar: Éxito; estado actual: CONFIRMED. Eventos nuevos: OrderConfirmed. | Enviar sin guia: Rechazo: Se requiere una guía de envío. Eventos nuevos: ninguno.,La confirmación debe ser valida y el envio rechazado por falta de guia. Estado final: CONFIRMED.
+E12,DRAFT,Confirmar dos veces,Primera confirmacion: Éxito; estado actual: CONFIRMED. Eventos nuevos: OrderConfirmed. | Segunda confirmacion: Rechazo: Solo DRAFT puede confirmarse. Eventos nuevos: ninguno.,La segunda confirmacion debe rechazarse. Estado final: CONFIRMED.
+E13,DRAFT,"Confirmar, enviar y cancelar",Confirmar: Éxito; estado actual: CONFIRMED. Eventos nuevos: OrderConfirmed. | Enviar: Éxito; estado actual: SHIPPED. Eventos nuevos: OrderShipped. | Cancelar: Rechazo: Solo CONFIRMED puede cancelarse. Eventos nuevos: ninguno.,La cancelacion debe rechazarse en SHIPPED. Estado final: SHIPPED.
+E14,DRAFT,"Confirmar, enviar y devolver",Confirmar: Éxito; estado actual: CONFIRMED. Eventos nuevos: OrderConfirmed. | Enviar: Éxito; estado actual: SHIPPED. Eventos nuevos: OrderShipped. | Devolver: Éxito; estado actual: RETURNED. Eventos nuevos: OrderReturned.,Se espera terminar en RETURNED. Estado final: RETURNED.
+E15,DRAFT,"Confirmar, enviar y entregar",Confirmar: Éxito; estado actual: CONFIRMED. Eventos nuevos: OrderConfirmed. | Enviar: Éxito; estado actual: SHIPPED. Eventos nuevos: OrderShipped. | Entregar: Éxito; estado actual: DELIVERED. Eventos nuevos: OrderDelivered.,Se espera terminar en DELIVERED. Estado final: DELIVERED.
